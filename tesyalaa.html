@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(0,0,0,0.2);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      color: #ff4d6d;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ffe0e6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1 id="text">TEKAN AKU DONG TESA :3</h1>
+    <button onclick="gombal()">Click Me</button>
+  </div>
+
+  <script>
+  let index = 0;
+
+  function gombal() {
+    const lines = [
+      "Tesyalaa, kamu cantik banget hari ini!",
+      "Terimakasih ya sudah menemani aku jalan tadi, aku senang banget bisa jalan sama kamu",
+      "Semoga kita bisa jalan-jalan lagi yaa",
+      "Jangan bosan-bosan yaa",
+      "Aku harap kita bisa terus seperti ini!",
+      "goodnight tesyalaa <3"
+    ];
+
+    document.getElementById("text").innerText = lines[index];
+
+    index++;
+
+    // kalau sudah sampai akhir, ulang dari awal
+    if (index >= lines.length) {
+      index = 0;
+    }
+  }
+</script>
