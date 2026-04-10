@@ -1,75 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>For You ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ff7eb3, #ff758c);
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-    }
-
-    .box {
-      background: rgba(0,0,0,0.2);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
-
-    h1 {
-      font-size: 2.5em;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background: white;
-      color: #ff4d6d;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #ffe0e6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunga untuk Tesya 🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-particles" id="particles"></div>
+    
+    <div class="falling-petals" id="fallingPetals"></div>
 
-  <div class="box">
-    <h1 id="text">TEKAN AKU DONG TESA :3</h1>
-    <button onclick="gombal()">Click Me</button>
-  </div>
+    <div class="main-container">
+        <!-- Glowing aura behind the flower -->
+        <div class="flower-glow"></div>
 
-  <script>
-  let index = 0;
+        <!-- The Flower -->
+        <div class="flower-wrapper" id="flowerWrapper">
+            <div class="flower">
+                <!-- Outer petals layer -->
+                <div class="petal-layer outer-layer">
+                    <div class="petal petal-1"></div>
+                    <div class="petal petal-2"></div>
+                    <div class="petal petal-3"></div>
+                    <div class="petal petal-4"></div>
+                    <div class="petal petal-5"></div>
+                    <div class="petal petal-6"></div>
+                    <div class="petal petal-7"></div>
+                    <div class="petal petal-8"></div>
+                </div>
+                <!-- Middle petals layer -->
+                <div class="petal-layer middle-layer">
+                    <div class="petal mid-petal mid-1"></div>
+                    <div class="petal mid-petal mid-2"></div>
+                    <div class="petal mid-petal mid-3"></div>
+                    <div class="petal mid-petal mid-4"></div>
+                    <div class="petal mid-petal mid-5"></div>
+                    <div class="petal mid-petal mid-6"></div>
+                </div>
+                <!-- Inner petals layer -->
+                <div class="petal-layer inner-layer">
+                    <div class="petal inner-petal inner-1"></div>
+                    <div class="petal inner-petal inner-2"></div>
+                    <div class="petal inner-petal inner-3"></div>
+                    <div class="petal inner-petal inner-4"></div>
+                    <div class="petal inner-petal inner-5"></div>
+                </div>
+                <!-- Center of the flower -->
+                <div class="flower-center">
+                    <div class="center-inner"></div>
+                    <div class="center-sparkle s1"></div>
+                    <div class="center-sparkle s2"></div>
+                    <div class="center-sparkle s3"></div>
+                    <div class="center-sparkle s4"></div>
+                </div>
+            </div>
 
-  function gombal() {
-    const lines = [
-      "Tesyalaa, kamu cantik banget hari ini!",
-      "Terimakasih ya sudah menemani aku jalan tadi, aku senang banget bisa jalan sama kamu",
-      "Semoga kita bisa jalan-jalan lagi yaa",
-      "Jangan bosan-bosan yaa",
-      "Aku harap kita bisa terus seperti ini!",
-      "goodnight tesyalaa <3"
-    ];
+            <!-- Stem -->
+            <div class="stem-container">
+                <div class="stem"></div>
+                <div class="leaf leaf-left">
+                    <div class="leaf-vein"></div>
+                </div>
+                <div class="leaf leaf-right">
+                    <div class="leaf-vein"></div>
+                </div>
+            </div>
+        </div>
 
-    document.getElementById("text").innerText = lines[index];
+        <!-- Message -->
+        <div class="message-container" id="message">
+            <div class="message-decoration left">✿</div>
+            <h1 class="title">Untuk Tesya</h1>
+            <p class="subtitle">Bunga ini mekar untukmu &#x1F338;</p>
+            <div class="heart-line">
+                <span class="heart">♥</span>
+                <span class="heart">♥</span>
+                <span class="heart">♥</span>
+            </div>
+            <div class="message-decoration right">✿</div>
+        </div>
+    </div>
 
-    index++;
+    <!-- Floating hearts -->
+    <div class="floating-hearts" id="floatingHearts"></div>
 
-    // kalau sudah sampai akhir, ulang dari awal
-    if (index >= lines.length) {
-      index = 0;
-    }
-  }
-</script>
+    <script src="script.js"></script>
+</body>
+</html>
